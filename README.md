@@ -5,6 +5,7 @@
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.85%2B-blue?logo=visualstudiocode)
 ![License](https://img.shields.io/badge/license-MIT-green)
+[![GitHub](https://img.shields.io/badge/source-GitHub-181717?logo=github)](https://github.com/bobsk8/env-switch)
 
 ---
 
@@ -122,6 +123,14 @@ To package:
 npm install -g @vscode/vsce
 vsce package
 ```
+
+---
+
+## Source Code & Transparency
+
+This extension is **fully open source**. You can inspect every line of code, verify that no secrets leave your machine, and contribute or report issues on GitHub:
+
+👉 **[github.com/bobsk8/env-switch](https://github.com/bobsk8/env-switch)**
 
 ---
 

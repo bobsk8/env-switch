@@ -151,6 +151,14 @@
     "test:watch": "jest --watch"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bobsk8/env-switch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bobsk8/env-switch/issues"
+  },
+  "homepage": "https://github.com/bobsk8/env-switch#readme",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^25.9.2",
