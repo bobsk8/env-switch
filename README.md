@@ -3,7 +3,7 @@
 > Switch between dev, staging, and prod `.env` profiles in one click.
 > Secrets live in the **OS keychain** — never as plaintext files in your repo.
 
-![VS Code](https://img.shields.io/badge/VS%20Code-1.85%2B-blue?logo=visualstudiocode)
+![VS Code](https://img.shields.io/badge/VS%20Code-1.120%2B-blue?logo=visualstudiocode)
 ![License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub](https://img.shields.io/badge/source-GitHub-181717?logo=github)](https://github.com/bobsk8/env-switch)
 
@@ -102,26 +102,27 @@ Each activation creates a snapshot. Pick one to restore.
 
 ## Requirements
 
-- VS Code 1.85.0 or later
+- VS Code 1.120.0 or later
 - A workspace folder must be open
-- A workspace folder open
-- A .env file (or .env.* variant)
 
 ---
 
 ## Development
 
 ```bash
+git clone https://github.com/bobsk8/env-switch.git
+cd env-switch
 npm install
-npm run compile
-npm run watch
+npm run compile   # build once
+npm run watch     # watch mode
 ```
 
-To package:
+Press `F5` in VS Code to launch the Extension Development Host.
+
+To generate the `.vsix` package:
 
 ```bash
-npm install -g @vscode/vsce
-vsce package
+npm run package
 ```
 
 ---
