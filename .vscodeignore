@@ -22,6 +22,9 @@ node_modules/**
 # Lock files
 package-lock.json
 
+# SVG source (only PNG icon is needed)
+resources/icon.svg
+
 # Unused config
 webpack.config.js
 tsconfig.json
