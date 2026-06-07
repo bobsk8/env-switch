@@ -2,7 +2,7 @@
   "name": "envswitch",
   "displayName": "EnvSwitch",
   "description": "Switch between .env profiles (dev, staging, prod) with one click. Secrets stored in the OS keychain — never in plaintext on disk.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "publisher": "bobsk8",
   "keywords": ["env", "dotenv", "environment", "profiles", "secrets"],
   "engines": {
