@@ -127,6 +127,22 @@ To generate the `.vsix` package:
 npm run package
 ```
 
+### Publishing a new version
+
+1. Edit `"version"` in [package.json](package.json) (e.g. `"0.4.0"` → `"0.5.0"`)
+2. Delete the old `.vsix` and rebuild:
+```bash
+rm -f envswitch-<old-version>.vsix
+npm run package
+```
+3. Commit and push:
+```bash
+git add package.json
+git commit -m "chore: bump version to X.X.X"
+git push
+```
+4. Upload the new `envswitch-<version>.vsix` to the [VS Code Marketplace](https://marketplace.visualstudio.com/manage)
+
 ---
 
 ## Source Code & Transparency
