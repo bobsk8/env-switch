@@ -1,0 +1,27 @@
+# Development tooling
+.vscode/**
+.vscode-test/**
+.github/**
+.gitignore
+
+# Source files (only compiled output goes in VSIX)
+src/**
+
+# Test infrastructure
+__mocks__/**
+out/test/**
+tsconfig.test.json
+jest.config.js
+
+# Dependencies (not needed in extension)
+node_modules/**
+
+# Build artefacts
+**/*.map
+
+# Lock files
+package-lock.json
+
+# Unused config
+webpack.config.js
+tsconfig.json

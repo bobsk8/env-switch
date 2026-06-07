@@ -1,0 +1,163 @@
+{
+  "name": "env-switch",
+  "displayName": "EnvSwitch",
+  "description": "Switch between .env profiles (dev, staging, prod) with one click. Secrets stored in the OS keychain — never in plaintext on disk.",
+  "version": "0.1.0",
+  "publisher": "dev-workspace",
+  "keywords": ["env", "dotenv", "environment", "profiles", "secrets"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "galleryBanner": {
+    "color": "#1e1e2e",
+    "theme": "dark"
+  },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "env-switch",
+          "title": "EnvSwitch",
+          "icon": "resources/env.svg"
+        }
+      ]
+    },
+    "views": {
+      "env-switch": [
+        {
+          "id": "envSwitch.profiles",
+          "name": "Profiles"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "envSwitch.createProfile",
+        "title": "Create Profile",
+        "icon": "$(add)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.switchProfile",
+        "title": "Switch Profile",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.activateProfile",
+        "title": "Activate",
+        "icon": "$(check)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.editProfile",
+        "title": "Edit Content",
+        "icon": "$(edit)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.deleteProfile",
+        "title": "Delete Profile",
+        "icon": "$(trash)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.diffProfiles",
+        "title": "Compare Profiles",
+        "icon": "$(diff)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.showHistory",
+        "title": "View History",
+        "icon": "$(history)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.validateProfile",
+        "title": "Validate vs .env.example",
+        "icon": "$(shield)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.searchVariable",
+        "title": "Search Variable",
+        "icon": "$(search)",
+        "category": "EnvSwitch"
+      },
+      {
+        "command": "envSwitch.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)",
+        "category": "EnvSwitch"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "envSwitch.createProfile",
+          "when": "view == envSwitch.profiles",
+          "group": "navigation"
+        },
+        {
+          "command": "envSwitch.diffProfiles",
+          "when": "view == envSwitch.profiles",
+          "group": "navigation"
+        },
+        {
+          "command": "envSwitch.searchVariable",
+          "when": "view == envSwitch.profiles",
+          "group": "navigation"
+        },
+        {
+          "command": "envSwitch.refresh",
+          "when": "view == envSwitch.profiles",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "envSwitch.activateProfile",
+          "when": "view == envSwitch.profiles && viewItem == profile",
+          "group": "inline"
+        },
+        {
+          "command": "envSwitch.editProfile",
+          "when": "view == envSwitch.profiles && viewItem == profile"
+        },
+        {
+          "command": "envSwitch.showHistory",
+          "when": "view == envSwitch.profiles && viewItem == profile"
+        },
+        {
+          "command": "envSwitch.validateProfile",
+          "when": "view == envSwitch.profiles && viewItem == profile"
+        },
+        {
+          "command": "envSwitch.deleteProfile",
+          "when": "view == envSwitch.profiles && viewItem == profile"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx @vscode/vsce package",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.9.2",
+    "@types/vscode": "^1.120.0",
+    "@vscode/vsce": "^3.9.2",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.11",
+    "typescript": "^6.0.3"
+  }
+}
