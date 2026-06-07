@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub](https://img.shields.io/badge/source-GitHub-181717?logo=github)](https://github.com/bobsk8/env-switch)
 
-![EnvSwitch demo](resources/demo.gif)
+![EnvSwitch demo](https://raw.githubusercontent.com/bobsk8/env-switch/main/resources/demo.gif)
 
 ---
 
